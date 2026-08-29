@@ -180,7 +180,7 @@ function calc(dt) {
             }
     
             if (player.feature >= 16) {
-                let p = player.humanoid.particle_accel, a = p.active, b4 = player.singularity.best_bh.gte(4), speed = Decimal.mul(b4 ? dt / 10 : dt / 100, tmp.global_mult)
+                let p = player.humanoid.particle_accel, a = p.active, b4 = player.singularity.best_bh.gte(4), speed = Decimal.mul(b4 ? dt * 10 : dt, tmp.global_mult)
                 if (player.hadron.starter_upgs.includes(3)) {
                     for (let i = 0; i < PARTICLE_ACCELERATOR.length; i++) {
                         let PA = PARTICLE_ACCELERATOR[i], pp = p.percent[i]
