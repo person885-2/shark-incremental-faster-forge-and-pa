@@ -1,5 +1,5 @@
 function loadGame(start=true, gotNaN=false) {
-    if (!gotNaN) prevSave = localStorage.getItem(SAVE_ID)
+    if (!gotNaN) prevSave = localStorage.getItem(SAVE_ID3)
     player = getPlayerData()
     load(prevSave)
     reloadTemp()
